@@ -1,0 +1,16 @@
+18 |   const service = services[currentServiceIndex];
+19 |   currentServiceIndex = (currentServiceIndex + 1) % services.length;
+20 |   return service;
+21 | }
+22 | 
+23 | const server = Bun.serve({
+                        ^
+error: Failed to start server. Is port 3000 in use?
+ syscall: "listen",
+   errno: 0,
+    code: "EADDRINUSE"
+
+      at E:\PROYECTOS\2026\bun-ai-api\index.ts:23:20
+      at loadAndEvaluateModule (2:1)
+
+Bun v1.3.0 (Windows x64)
