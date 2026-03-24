@@ -5,10 +5,11 @@ const cerebras = new Cerebras();
 
 export const cerebrasService: AIService = {
   name: "cerebras",
+  model: "llama3.1-8b",
   async chat(messages: ChatMessage[]) {
     const stream = await cerebras.chat.completions.create({
       "messages": messages as any,
-      "model": "zai-glm-4.6",
+      "model": "llama3.1-8b",
       "temperature": 0.6,
       "max_completion_tokens": 40960,
       "top_p": 0.95,

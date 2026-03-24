@@ -8,9 +8,10 @@ const openrouter = new OpenAI({
 
 export const openrouterService: AIService = {
   name: "openrouter",
+  model: "openrouter/free",
   async chat(messages: ChatMessage[]) {
     const stream = await openrouter.chat.completions.create({
-      model: "meta-llama/llama-3.3-70b-instruct:free", // Free model
+      model: "openrouter/free", // Free model
       messages: messages,
       temperature: 0.6,
       max_tokens: 4096,

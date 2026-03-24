@@ -5,6 +5,7 @@ const groq = new Groq();
 
 export const groqService: AIService = {
   name: 'groq',
+  model: 'llama-3.3-70b-versatile',
   async chat(messages: ChatMessage[]) {
     const chatCompletion = await groq.chat.completions.create({
       "messages": messages,

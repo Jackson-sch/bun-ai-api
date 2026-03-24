@@ -8,6 +8,7 @@ const sambanova = new OpenAI({
 
 export const sambanovaService: AIService = {
   name: "sambanova",
+  model: "Meta-Llama-3.3-70B-Instruct",
   async chat(messages: ChatMessage[]) {
     const stream = await sambanova.chat.completions.create({
       model: "Meta-Llama-3.3-70B-Instruct",

@@ -5,6 +5,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export const geminiService: AIService = {
   name: "gemini",
+  model: "gemini-3-flash-preview",
   async chat(messages: ChatMessage[]) {
     const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
